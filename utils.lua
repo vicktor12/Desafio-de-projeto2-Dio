@@ -43,20 +43,23 @@ end
 
 function utils.printCreature(creature)
 
-local healthRate = math.floor((creature.health / creature.maxHealth) * 10)
+    local healthRate = math.floor((creature.health / creature.maxHealth) * 10)
 
-print("| " .. creature.name)
-print("| ")
-print("| " .. creature.description)
-print("| ")
-print("| Atributos: ")
-print("|     Ataque:     " .. utils.getProgressBar(creature.attack))
-print("|     Defesa:     " .. utils.getProgressBar(creature.defense))
-print("|     Vida:       " .. utils.getProgressBar(healthRate))
-print("|     Velocidade: " .. utils.getProgressBar(creature.speed))
+    print("=================================================")
+    print("| " .. creature.name)
+    print("| ")
+    print("| " .. creature.description)
+    print("| ")
+    print("| Atributos: ")
+    print("|     Ataque:     " .. utils.getProgressBar(creature.attack))
+    print("|     Defesa:     " .. utils.getProgressBar(creature.defense))
+    print("|     Vida:       " .. utils.getProgressBar(healthRate))
+    print("|     Velocidade: " .. utils.getProgressBar(creature.speed))
+    print("=================================================")
+    print()
+    print()
 
 end
-
 
 
 return utils
